@@ -1,0 +1,22 @@
+<div class="details-section">
+  <div class="container-fluid">
+    <div class="details-left-panel">
+      <div>
+        <img class="details-img"
+             src="{{ product.image }}"
+             alt="product image"/>
+      </div>
+      <div class="details-right-panel">
+        <div class="details-title">{{ product.name }}</div>
+        <div class="details-price-pos">
+          {{ product.price }} PLN
+          <button (click)="addToCart()"
+                  class="btn btn-secondary btn-sm">
+            Add to cart
+          </button>
+        </div>
+        <div class="details-description">{{ product.details }}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.active-link {
+  color: black !important;
+  font-weight: bold;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+html, body {
+  height: 95%;
+  width: 100%;
+}
+
+img {
+  border-radius: 8px;
+}
+
+.main-content {
+  padding-top: 110px;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  background: #e5e5e5;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-container {
+  background: #e5e5e5;
+  height: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.section-wrap {
+  display: flex;
+  align-items: center;
+}

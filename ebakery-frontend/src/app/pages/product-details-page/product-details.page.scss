@@ -1,0 +1,41 @@
+.details-description {
+  font-size: 17px;
+  height: 200px;
+  line-height: 2;
+  margin-left: 50px;
+  margin-bottom: 200px;
+  margin-right: 200px;
+  padding-bottom: 200px;
+  text-align: justify;
+}
+
+.details-left-panel {
+  display: flex;
+  padding-top: 70px;
+  margin-left: 150px;
+}
+
+.details-img {
+  height: 300px;
+}
+
+.details-price-pos {
+  margin-left: 205px;
+}
+
+.details-right-panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details-section {
+  margin-top: 65px;
+}
+
+.details-title {
+  font-size: 25px;
+  font-weight: 600;
+  height: 100px;
+  padding-left: 300px;
+  text-align: center;
+}

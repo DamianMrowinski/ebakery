@@ -1,0 +1,30 @@
+<div class="main-content">
+  <h4 class="text-center">{{ currentCategory | titlecase  }}</h4>
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+      <div *ngFor="let product of products"
+           class="col-md-3 ">
+        <div class="product-box">
+          <a routerLink="/products/{{ product.id }}">
+            <img
+              src="{{ product.image }}"
+              alt="product image">
+          </a>
+          <a routerLink="/products/{{ product.id }}">
+            <div class="product-box-name">{{ product.name }}</div>
+          </a>
+          <button (click)="addToCart(product)"
+                  class="btn float-right">
+            <i class="fas fa-cart-plus"></i>
+          </button>
+          <div class="product-box-price"> {{ product.price }} PLN</div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="products?.length == 0">
+      No products were found.
+    </div>
+  </div>
+</div>
+

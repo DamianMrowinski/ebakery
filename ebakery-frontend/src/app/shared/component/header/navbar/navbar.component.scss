@@ -1,0 +1,28 @@
+.header-logo-size {
+  height: 100px;
+}
+
+.header-format {
+  background: #F5F5F5;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  height: 78px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+}
+
+.header-format .section-content {
+  left: 20%;
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}

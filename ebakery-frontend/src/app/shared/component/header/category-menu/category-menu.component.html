@@ -1,0 +1,12 @@
+<nav class="section-wrap navbar-sidebar">
+  <div class="categories-list"
+       *ngFor="let category of categories">
+    <a class="categories-list-tabs"
+       routerLink="/category/{{ category.id }}/{{ category.categoryName }}"
+       routerLinkActive="active-link">
+      {{ category.categoryName | uppercase }}
+    </a>
+  </div>
+</nav>
+
+

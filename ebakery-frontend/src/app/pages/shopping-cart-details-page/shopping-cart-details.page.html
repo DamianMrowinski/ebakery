@@ -1,0 +1,65 @@
+<div class="main-content">
+  <h4 class="text-center"> Shopping cart </h4>
+  <hr>
+  <div class="table-cart-details">
+    <div *ngIf="itemsInCart.length > 0">
+      <table class="table table-striped table-active text-center">
+        <tr>
+          <th class="th-width25"></th>
+          <th class="th-width25">Product</th>
+          <th class="th-width20">Quantity</th>
+          <th class="th-width25">Price</th>
+          <th class="th-width5"></th>
+        </tr>
+        <tr *ngFor="let item of itemsInCart">
+          <td>
+            <img src="{{ item.image }}"
+                 alt="product image"
+                 class="img-responsive"
+                 width="100px"/>
+          </td>
+          <td class="align-middle">
+            <p>{{ item.name }}</p>
+          </td>
+          <td class="align-middle">
+            <div class="items">
+              <button (click)="decreaseAmount(item)"
+                      class="btn">
+                <i class="far fa-minus-square"></i>
+              </button>
+              {{ item.amount }}
+              <button (click)="increaseAmount(item)"
+                      class="btn">
+                <i class="far fa-plus-square"></i>
+              </button>
+            </div>
+          </td>
+          <td class="align-middle">
+            <p>{{ item.price }} PLN</p>
+          </td>
+          <td class="align-middle">
+            <button (click)="removeItem(item)"
+                    class="btn">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </table>
+      <p class="free-delivery">Free delivery</p>
+      <p class="total-price-margin">
+        <b>Total price: {{ price }} PLN</b></p>
+      <div>
+        <a routerLink="/checkout"
+           class="btn btn-secondary btn-sm float-right total-btn-margin">
+          Checkout
+        </a>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="itemsInCart == 0"
+       class="alert alert-dark text-center"
+       role="alert">
+    Shopping cart is empty.
+  </div>
+</div>
+
