@@ -4,8 +4,8 @@ Ordering bakery products online
 
 ---------------------------------------------
 ##### This project contains technologies:
-- Spring Boot 2.2.6
 - Java 13
+- Spring Boot 2.2.6
 - Angular 9
 - Ng-bootstrap 6.1
 - Docker Compose 3.1

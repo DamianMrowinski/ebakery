@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckoutPage } from './checkout.page';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CheckoutPage', () => {
 
@@ -14,7 +15,8 @@ describe('CheckoutPage', () => {
         CheckoutPage
       ],
       imports: [
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RouterTestingModule
       ],
     }).compileComponents();
   }));
