@@ -11,7 +11,7 @@ public class CategoryEntityToCategoryDtoConverterImpl implements CategoryEntityT
     public CategoryDto convert(Category category) {
         return new CategoryDto(
                 category.getId(),
-                category.getCategoryName()
+                category.getName()
         );
     }
 

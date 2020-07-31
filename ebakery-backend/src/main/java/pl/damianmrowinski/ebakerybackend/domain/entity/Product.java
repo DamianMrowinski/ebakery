@@ -1,12 +1,18 @@
 package pl.damianmrowinski.ebakerybackend.domain.entity;
 
+import java.math.BigDecimal;
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
-import javax.persistence.*;
-import java.math.BigDecimal;
-import java.util.Date;
 
 @Entity
 @Table(name = "product")
@@ -15,32 +21,23 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "details")
     private String details;
 
-    @Column(name = "amount")
     private Long amount;
 
-    @Column(name = "price")
     private BigDecimal price;
 
-    @Column(name = "active")
     private boolean active;
 
-    @Column(name = "image")
     private String image;
 
-    @Column(name = "created_date")
     @CreationTimestamp
     private Date createdDate;
 
-    @Column(name = "updated_date")
     @UpdateTimestamp
     private Date updatedDate;
 

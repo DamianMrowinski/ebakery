@@ -3,22 +3,21 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="product-test-data" author="dmrowinski" context="test-data" runOnChange="true">
-        <loadUpdateData file="data/test/product.csv"
-                        primaryKey="name"
-                        tableName="product"
+    <changeSet id="category-test-data" author="dmrowinski" context="test-data" runOnChange="true">
+        <loadUpdateData file="data/test/category.csv"
+                        primaryKey="id"
+                        tableName="category"
                         relativeToChangelogFile="true"
                         separator=";">
         </loadUpdateData>
     </changeSet>
 
-    <changeSet id="category-test-data" author="dmrowinski" context="test-data" runOnChange="true">
-        <loadUpdateData file="data/test/category.csv"
-                        primaryKey="category_id"
-                        tableName="category"
+    <changeSet id="product-test-data" author="dmrowinski" context="test-data" runOnChange="true">
+        <loadUpdateData file="data/test/product.csv"
+                        primaryKey="id"
+                        tableName="product"
                         relativeToChangelogFile="true"
                         separator=";">
-                        <column name="category_id" type="COMPUTED"/>
         </loadUpdateData>
     </changeSet>
 
