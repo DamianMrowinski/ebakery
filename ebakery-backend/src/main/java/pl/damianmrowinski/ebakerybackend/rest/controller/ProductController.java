@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/products")
-@CrossOrigin
 public class ProductController {
 
     private final ProductDetailsService productDetailsService;

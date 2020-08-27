@@ -69,7 +69,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ebakery-frontend:build"
+            "browserTarget": "ebakery-frontend:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
