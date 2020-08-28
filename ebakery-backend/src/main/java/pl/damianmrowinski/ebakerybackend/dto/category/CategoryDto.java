@@ -1,4 +1,4 @@
-package pl.damianmrowinski.ebakerybackend.dto;
+package pl.damianmrowinski.ebakerybackend.dto.category;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

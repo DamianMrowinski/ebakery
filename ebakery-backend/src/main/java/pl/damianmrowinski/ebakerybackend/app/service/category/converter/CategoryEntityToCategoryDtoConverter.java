@@ -1,7 +1,7 @@
 package pl.damianmrowinski.ebakerybackend.app.service.category.converter;
 
-import pl.damianmrowinski.ebakerybackend.domain.entity.Category;
-import pl.damianmrowinski.ebakerybackend.dto.CategoryDto;
+import pl.damianmrowinski.ebakerybackend.domain.entity.category.Category;
+import pl.damianmrowinski.ebakerybackend.dto.category.CategoryDto;
 
 public interface CategoryEntityToCategoryDtoConverter {
 
