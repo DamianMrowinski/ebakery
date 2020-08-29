@@ -1,12 +1,22 @@
 export class Product {
-  active: boolean;
-  amount: number;
   categoryId: number;
-  createdDate: Date;
   details: string;
   id: string;
   image: string;
   price: number;
   name: string;
-  updatedDate: Date;
+
+  constructor(categoryId: number,
+              details: string,
+              id: string,
+              image: string,
+              price: number,
+              name: string) {
+    this.categoryId = categoryId;
+    this.details = details;
+    this.id = id;
+    this.image = image;
+    this.price = price;
+    this.name = name;
+  }
 }

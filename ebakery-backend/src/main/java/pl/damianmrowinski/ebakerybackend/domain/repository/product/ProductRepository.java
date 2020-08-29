@@ -1,8 +1,8 @@
-package pl.damianmrowinski.ebakerybackend.domain.repository;
+package pl.damianmrowinski.ebakerybackend.domain.repository.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import pl.damianmrowinski.ebakerybackend.domain.entity.Product;
+import pl.damianmrowinski.ebakerybackend.domain.entity.product.Product;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package pl.damianmrowinski.ebakerybackend.app.service.category;
 
 import org.springframework.transaction.annotation.Transactional;
-import pl.damianmrowinski.ebakerybackend.dto.CategoryDto;
+import pl.damianmrowinski.ebakerybackend.dto.category.CategoryDto;
 
 import java.util.List;
 

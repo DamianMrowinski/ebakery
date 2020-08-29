@@ -3,8 +3,8 @@ package pl.damianmrowinski.ebakerybackend.rest.controller;
 import org.springframework.web.bind.annotation.*;
 import pl.damianmrowinski.ebakerybackend.app.service.product.ProductDetailsService;
 import pl.damianmrowinski.ebakerybackend.app.service.product.ProductListService;
-import pl.damianmrowinski.ebakerybackend.dto.ProductDetailsDto;
-import pl.damianmrowinski.ebakerybackend.dto.ProductListDto;
+import pl.damianmrowinski.ebakerybackend.dto.product.ProductDetailsDto;
+import pl.damianmrowinski.ebakerybackend.dto.product.ProductListDto;
 
 import java.util.List;
 

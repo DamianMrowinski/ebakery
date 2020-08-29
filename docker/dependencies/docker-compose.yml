@@ -2,11 +2,12 @@ version: '3.1'
 
 services:
   db:
+    container_name: ebakery_db
     image: postgres:12.3
-    restart: always
     environment:
       POSTGRES_DB: ebakery
       POSTGRES_USER: ebakery-user
       POSTGRES_PASSWORD: xa35!ZxX(@A
+    restart: unless-stopped
     ports:
       - 5432:5432

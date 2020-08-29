@@ -1,125 +1,124 @@
 <div class="main-content">
   <div class="container-fluid">
     <form [formGroup]="checkoutFormGroup"
+          class="form"
+          novalidate
           (ngSubmit)="saveOrder()">
-      <div formGroupName="client"
-           class="form-area">
-        <h4 class="h4-padding">Customer</h4>
-        <div class="row">
-          <div class="col-md-2">
-            <label for="firstName">First name</label>
-          </div>
-          <div class="col-md-8">
-            <div class="input-space">
-              <input formControlName="firstName"
-                     id="firstName"
-                     type="text"/>
-            </div>
-          </div>
+      <h4 class="h4-pad">Customer</h4>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="firstName">First name</label>
         </div>
-        <div class="row">
-          <div class="col-md-2">
-            <label for="lastName">Last name</label>
-          </div>
-          <div class="col-md-8">
-            <div class="input-space">
-              <input formControlName="lastName"
-                     id="lastName"
-                     type="text"/>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2">
-            <label for="mail">Mail</label>
-          </div>
-          <div class="col-md-8">
-            <div class="input-space">
-              <input formControlName="mail"
-                     id="mail"
-                     type="text"/>
-            </div>
+        <div class="col-md-8">
+          <div class="input-space">
+            <input formControlName="firstName"
+                   id="firstName"
+                   type="text"/>
           </div>
         </div>
       </div>
-      <div formGroupName="address"
-           class="form-area">
-        <h4 class="h4-padding">Address</h4>
-        <div class="row">
-          <div class="col-md-2">
-            <label for="country">Country</label>
-          </div>
-          <div class="col-md-8">
-            <div class="input-space">
-              <select
-                id="country"
-                formControlName="country">
-                <option value="">Select from list</option>
-                <option value="BE">Belgium</option>
-                <option value="BR">Brazil</option>
-                <option value="BG">Bulgaria</option>
-                <option value="CA">Canada</option>
-                <option value="CN">China</option>
-                <option value="HR">Croatia</option>
-                <option value="CZ">Czech Republic</option>
-                <option value="DK">Denmark</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
-                <option value="GR">Greece</option>
-                <option value="IT">Italy</option>
-                <option value="NO">Norway</option>
-                <option value="PL">Poland</option>
-                <option value="PT">Portugal</option>
-                <option value="ES">Spain</option>
-                <option value="SE">Sweden</option>
-                <option value="CH">Switzerland</option>
-                <option value="TR">Turkey</option>
-                <option value="GB">United Kingdom</option>
-                <option value="US">United States of America</option>
-              </select>
-            </div>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="lastName">Last name</label>
+        </div>
+        <div class="col-md-8">
+          <div class="input-space">
+            <input formControlName="lastName"
+                   id="lastName"
+                   type="text"/>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-2">
-            <label for="city">City</label>
-          </div>
-          <div class="col-md-8">
-            <div class="input-space">
-              <input formControlName="city"
-                     id="city"
-                     type="text"/>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="mail">Mail</label>
+        </div>
+        <div class="col-md-8">
+          <div class="input-space">
+            <input formControlName="mail"
+                   id="mail"
+                   type="text"/>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-2">
-            <label for="street">Street</label>
-          </div>
-          <div class="col-md-8">
-            <div class="input-space">
-              <input formControlName="street"
-                     id="street"
-                     type="text"/>
-            </div>
+      </div>
+      <br>
+      <h4 class="h4-pad">Address</h4>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="country">Country</label>
+        </div>
+        <div class="col-md-8">
+          <div class="input-space">
+            <select
+              id="country"
+              formControlName="country">
+              <option value="">Select from list</option>
+              <option value="BE">Belgium</option>
+              <option value="BR">Brazil</option>
+              <option value="BG">Bulgaria</option>
+              <option value="CA">Canada</option>
+              <option value="CN">China</option>
+              <option value="HR">Croatia</option>
+              <option value="CZ">Czech Republic</option>
+              <option value="DK">Denmark</option>
+              <option value="FR">France</option>
+              <option value="DE">Germany</option>
+              <option value="GR">Greece</option>
+              <option value="IT">Italy</option>
+              <option value="NO">Norway</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="ES">Spain</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="TR">Turkey</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States of America</option>
+            </select>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-2">
-            <label for="zipCode">Zip Code</label>
-          </div>
-          <div class="col-md-8">
-            <div class="input-space">
-              <input formControlName="zipCode"
-                     id="zipCode"
-                     type="text"/>
-            </div>
-          </div>
-          <button
-            class="btn btn-secondary btn-sm float-right purchase-button">
-            Purchase
-          </button>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="city">City</label>
         </div>
+        <div class="col-md-8">
+          <div class="input-space">
+            <input formControlName="city"
+                   id="city"
+                   type="text"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="street">Street</label>
+        </div>
+        <div class="col-md-8">
+          <div class="input-space">
+            <input formControlName="street"
+                   id="street"
+                   type="text"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="zipCode">Zip Code</label>
+        </div>
+        <div class="col-md-8">
+          <div class="input-space">
+            <input formControlName="zipCode"
+                   id="zipCode"
+                   type="text"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit"
+                class="btn btn-secondary btn-sm float-right purchase-button">
+          Purchase
+        </button>
       </div>
     </form>
   </div>

@@ -1,48 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
-import { ShoppingCartService } from '../../shared/service/shopping-cart.service';
+import {Component} from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import {Router} from '@angular/router';
+import {ShoppingCartService} from '../../shared/service/shopping-cart.service';
+import {OrderService} from '../../shared/service/order.service';
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.page.html',
   styleUrls: ['./checkout.page.scss'],
 })
-export class CheckoutPage implements OnInit {
+export class CheckoutPage {
 
-  checkoutFormGroup: FormGroup;
+  checkoutFormGroup = this.formBuilder.group({
+    firstName: [],
+    lastName: [],
+    mail: [],
+    country: [],
+    city: [],
+    street: [],
+    zipCode: []
+  });
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               private shoppingCartService: ShoppingCartService,
-  ) {
-  }
-
-  ngOnInit(): void {
-    this.checkoutFormGroup = this.formBuilder.group({
-      client: this.formBuilder.group({
-        firstName: [],
-        lastName: [],
-        mail: [],
-      }),
-      address: this.formBuilder.group({
-        country: [],
-        city: [],
-        street: [],
-        zipCode: [],
-      }),
-    });
+              private orderService: OrderService) {
   }
 
   saveOrder(): void {
-    console.log(this.checkoutFormGroup.get('client').value);
-    console.log(this.checkoutFormGroup.get('address').value);
-    let totalAmount = 0;
-    this.shoppingCartService.itemsInCart
-      .forEach(item => totalAmount += (item.price * item.amount));
-    console.log(totalAmount);
-     // TODO save order
-
+    this.orderService.saveOrder$(this.checkoutFormGroup.value).subscribe();
     this.router.navigate(['order-submitted']);
   }
 }
