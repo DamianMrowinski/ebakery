@@ -55,8 +55,8 @@
                                  constraintName="product_category_fk"/>
     </changeSet>
 
-    <changeSet id="create-table-order-details" author="dmrowinski">
-        <createTable tableName="order_details">
+    <changeSet id="create-table-purchase" author="dmrowinski">
+        <createTable tableName="purchase">
             <column name="id" type="BIGINT" autoIncrement="true" startWith="10000">
                 <constraints primaryKey="true"/>
             </column>
@@ -84,9 +84,9 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="create-table-order-product" author="dmrowinski">
-        <createTable tableName="order_product">
-            <column name="order_id" type="BIGINT">
+    <changeSet id="create-table-purchase-product" author="dmrowinski">
+        <createTable tableName="purchase_product">
+            <column name="purchase_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
             <column name="product_id" type="BIGINT">
@@ -97,19 +97,19 @@
             </column>
         </createTable>
 
-        <addPrimaryKey tableName="order_product" columnNames="order_id, product_id"
-                       constraintName="order_product_pkey"/>
+        <addPrimaryKey tableName="purchase_product" columnNames="purchase_id, product_id"
+                       constraintName="purchase_product_pkey"/>
 
-        <addForeignKeyConstraint baseTableName="order_product"
-                                 baseColumnNames="order_id"
-                                 referencedTableName="order_details"
+        <addForeignKeyConstraint baseTableName="purchase_product"
+                                 baseColumnNames="purchase_id"
+                                 referencedTableName="purchase"
                                  referencedColumnNames="id"
-                                 constraintName="order_product_order_details_fk"/>
-        <addForeignKeyConstraint baseTableName="order_product"
+                                 constraintName="purchase_product_purchase_fk"/>
+        <addForeignKeyConstraint baseTableName="purchase_product"
                                  baseColumnNames="product_id"
                                  referencedTableName="product"
                                  referencedColumnNames="id"
-                                 constraintName="order_product_product_fk"/>
+                                 constraintName="purchase_product_product_fk"/>
     </changeSet>
 
 </databaseChangeLog>

@@ -4,7 +4,7 @@ Ordering bakery products online
 
 ---------------------------------------------
 ##### This project contains technologies:
-- Java 13
+- Java 11
 - Spring Boot 2.2.6
 - Angular 9
 - Ng-bootstrap 6.1
@@ -15,6 +15,7 @@ Ordering bakery products online
 - Maven 3.6.2
 - Lombok 1.18.12
 
+###### To run the application you need to install: Java JDK 11 Node.js, Docker
 ---------------------------------------------
 ##### Features:
 - show list of products for each category
@@ -24,8 +25,6 @@ Ordering bakery products online
 - change quantity or remove products from shopping cart
 - check total price, quantity and products names for the order 
 - generate order id and save the order in db
-
-###### To run the application you need to install: Java JDK 13, Node.js, Docker
 
 --------------------------------------------
 #### How to run application:
