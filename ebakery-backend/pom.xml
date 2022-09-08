@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <postgresql.version>42.2.14</postgresql.version>
+        <postgresql.version>42.4.1</postgresql.version>
         <liquibase-core.version>3.8.5</liquibase-core.version>
     </properties>
 
